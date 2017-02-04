@@ -226,7 +226,7 @@ void AssignUV(FbxGeometryElementUV* meshUV, Vector2f* uvs, int uvCount, int* tri
 void SaveFile(const char* filePath, FbxScene* scene, FbxManager* manager)
 {
 	FbxExporter* exporter = FbxExporter::Create(manager, "");
-	bool exportStatus = exporter->Initialize(filePath, 1, manager->GetIOSettings());
+	bool exportStatus = exporter->Initialize(filePath, -1, manager->GetIOSettings());
 	if (!exportStatus)
 	{
 		printf("Exporter Initialization failed\n");
